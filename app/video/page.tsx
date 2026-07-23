@@ -123,29 +123,30 @@ export default function VideoPage() {
         </div>
       </section>
 
-      {/* VIDEO MODAL */}
+{/* VIDEO MODAL */}
 {selectedVideo && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 px-4">
+  <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/95 px-4">
     <button
       onClick={() => setSelectedVideo(null)}
-      className="absolute right-6 top-6 z-[1000] text-4xl font-light text-white transition hover:text-gray-400"
+      className="fixed right-8 top-6 z-[1001] text-4xl font-light text-white transition hover:text-gray-400"
     >
       ×
     </button>
 
-          <div className="w-full max-w-6xl">
-            <div className="relative aspect-video">
-              <iframe
-                className="absolute inset-0 h-full w-full"
-                src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&rel=0`}
-                title="Video Player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      )}
-    </main>
-  );
+    <div className="w-full max-w-6xl">
+      <div className="relative aspect-video">
+        <iframe
+          className="absolute inset-0 h-full w-full"
+          src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&rel=0`}
+          title="Video Player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </div>
+)}
+
+</main>
+);
 }

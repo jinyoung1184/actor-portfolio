@@ -118,9 +118,9 @@ const works = [
 type Work = (typeof works)[number];
 
 export default function CareerPage() {
-  const [selectedWork, setSelectedWork] = useState<Work | null>(null);
-  const [playVideo, setPlayVideo] = useState(false);
-  const [selectedStill, setSelectedStill] = useState<string | null>(null);
+const [selectedWork, setSelectedWork] = useState<Work | null>(null);
+const [videoModal, setVideoModal] = useState(false);
+const [selectedStill, setSelectedStill] = useState<string | null>(null);
 
   return (
   <main className="min-h-screen bg-black pt-24 text-white">
@@ -155,10 +155,10 @@ export default function CareerPage() {
           {works.map((work) => (
             <button
               key={work.title}
-              onClick={() => {
-                setSelectedWork(work);
-                setPlayVideo(false);
-              }}
+onClick={() => {
+  setSelectedWork(work);
+  setVideoModal(false);
+}}
               className="group text-left"
             >
               <div className="relative aspect-[16/9] overflow-hidden rounded-sm fade-in">
@@ -197,109 +197,117 @@ export default function CareerPage() {
         </div>
       </section>
 
-      {/* MODAL */}
-      {selectedWork && (
-<div className="fixed inset-0 z-50 overflow-y-auto bg-black/95">
-  <button
-    onClick={() => {
-      setSelectedWork(null);
-      setPlayVideo(false);
-    }}
-    className="fixed right-8 top-6 text-4xl font-light text-white hover:text-gray-400"
-  >
-    ×
-  </button>
+{/* MODAL */}
+{selectedWork && (
+<div className="fixed inset-0 z-[1000] overflow-y-auto bg-black/95 fade-in">
+    <button
+onClick={() => {
+  setSelectedWork(null);
+  setVideoModal(false);
+  setSelectedStill(null);
+}}
+className="fixed right-8 top-6 z-[1001] text-4xl font-light text-white hover:text-gray-400 transition"
+    >
+      ×
+    </button>
 
-          <div className="mx-auto max-w-6xl px-6 py-20">
+    <div className="mx-auto max-w-6xl px-6 py-20">
 
+      {/* VIDEO */}
+{selectedWork.youtubeId && (
+  <div className="mx-auto mt-12 w-full max-w-6xl fade-in">
+    <button
+      onClick={() => setVideoModal(true)}
+      className="group relative block w-full overflow-hidden"
+    >
+      <img
+        src={selectedWork.videoThumbnail!}
+        alt={selectedWork.title}
+        className="w-full object-cover transition duration-700 group-hover:scale-105"
+      />
 
-            {/* VIDEO */}
-            {selectedWork.youtubeId && (
-              <div className="mt-12 mx-auto max-w-4xl">
-                {!playVideo ? (
-                  <button
-                    onClick={() => setPlayVideo(true)}
-                    className="group relative block w-full overflow-hidden"
-                  >
-                    <img
-                      src={selectedWork.videoThumbnail!}
-                      alt={selectedWork.title}
-                      className="w-full object-cover transition duration-700 group-hover:scale-105"
-                    />
-
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                      <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/70 bg-black/50 backdrop-blur-sm">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="34"
-                          height="34"
-                          viewBox="0 0 24 24"
-                          fill="white"
-                        >
-                          <polygon points="5,3 19,12 5,21" />
-                        </svg>
-                      </div>
-                    </div>
-                  </button>
-                ) : (
-                  <div className="relative aspect-video">
-                    <iframe
-                      className="absolute inset-0 h-full w-full"
-                      src={`https://www.youtube.com/embed/${selectedWork.youtubeId}?autoplay=1&rel=0`}
-                      title={selectedWork.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* FESTIVAL */}
-
-            {/* STILLS */}
-            {selectedWork.stills.length > 0 && (
-              <div className="mt-16 grid grid-cols-2 gap-4 md:gap-6">
-                {selectedWork.stills.map((still) => (
-                  <button
-                    key={still}
-                    onClick={() => setSelectedStill(still)}
-                    className="aspect-video overflow-hidden"
-                  >
-                    <img
-                      src={still}
-                      alt=""
-                      className="h-full w-full object-cover transition duration-300 hover:scale-105"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* STILL MODAL */}
-      {selectedStill && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4"
-          onClick={() => setSelectedStill(null)}
-        >
-          <button
-            onClick={() => setSelectedStill(null)}
-            className="absolute right-6 top-6 text-4xl font-light text-white"
+      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+        <div className="flex h-20 w-20 items-center justify-center rounded-full border border-white/70 bg-black/50 backdrop-blur-sm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            viewBox="0 0 24 24"
+            fill="white"
           >
-            ×
-          </button>
+            <polygon points="5,3 19,12 5,21" />
+          </svg>
+        </div>
+      </div>
+    </button>
+  </div>
+)}
 
-          <img
-            src={selectedStill}
-            alt=""
-            className="max-h-[90vh] max-w-[95vw] object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
+      {/* STILLS */}
+      {selectedWork.stills.length > 0 && (
+        <div className="mt-16 grid grid-cols-2 gap-4 md:gap-6">
+          {selectedWork.stills.map((still) => (
+            <button
+              key={still}
+              onClick={() => setSelectedStill(still)}
+              className="aspect-video overflow-hidden"
+            >
+              <img
+                src={still}
+                alt=""
+                className="h-full w-full object-cover transition duration-300 hover:scale-105"
+              />
+            </button>
+          ))}
         </div>
       )}
-    </main>
-  );
+    </div>
+  </div>
+)}
+{videoModal && selectedWork?.youtubeId && (
+  <div className="fixed inset-0 z-[3000] flex items-center justify-center bg-black/95 px-4">
+    <button
+      onClick={() => setVideoModal(false)}
+      className="fixed right-8 top-6 z-[3001] text-5xl font-light text-white hover:text-gray-400 transition"
+    >
+      ×
+    </button>
+
+    <div className="w-full max-w-6xl">
+      <div className="relative aspect-video">
+        <iframe
+          className="absolute inset-0 h-full w-full"
+          src={`https://www.youtube.com/embed/${selectedWork.youtubeId}?autoplay=1&rel=0`}
+          title={selectedWork.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </div>
+)}
+{/* STILL MODAL */}
+{selectedStill && (
+  <div
+    className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/95 p-4"
+    onClick={() => setSelectedStill(null)}
+  >
+    <button
+      onClick={() => setSelectedStill(null)}
+className="absolute right-6 top-6 z-[2001] text-4xl font-light text-white"
+    >
+      ×
+    </button>
+
+    <img
+      src={selectedStill}
+      alt=""
+      className="max-h-[90vh] max-w-[95vw] object-contain"
+      onClick={(e) => e.stopPropagation()}
+    />
+  </div>
+)}
+
+</main>
+);
 }

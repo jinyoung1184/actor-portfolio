@@ -31,7 +31,7 @@ export default function ProfilePage() {
       </nav>
 
       {/* 프로필 사진 3장 */}
-      <section className="mx-auto max-w-6xl px-6">
+<section className="mx-auto max-w-6xl px-6 fade-in">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <img
             src="/images/profile1.jpg"
