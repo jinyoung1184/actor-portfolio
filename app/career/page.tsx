@@ -9,7 +9,7 @@ const works = [
     youtubeId: "rkOK5ONG9mQ",
     videoThumbnail: "/video/zombie1.JPG",
     festival: [
-      "제22회 제천국제음악영화제 뉴탤런트",
+      "제22회 제천국제음악영화제",
       "제29회 부천국제판타스틱영화제 단편경쟁",
     ],
     poster: "/posters/zombie.JPG",
@@ -199,16 +199,16 @@ export default function CareerPage() {
 
       {/* MODAL */}
       {selectedWork && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/95">
-          <button
-            onClick={() => {
-              setSelectedWork(null);
-              setPlayVideo(false);
-            }}
-            className="fixed right-8 top-6 text-4xl font-light text-white hover:text-gray-400"
-          >
-            ×
-          </button>
+<div className="fixed inset-0 z-50 overflow-y-auto bg-black/95">
+  <button
+    onClick={() => {
+      setSelectedWork(null);
+      setPlayVideo(false);
+    }}
+    className="fixed right-8 top-6 text-4xl font-light text-white hover:text-gray-400"
+  >
+    ×
+  </button>
 
           <div className="mx-auto max-w-6xl px-6 py-20">
 

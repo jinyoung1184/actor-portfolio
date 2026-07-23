@@ -124,14 +124,14 @@ export default function VideoPage() {
       </section>
 
       {/* VIDEO MODAL */}
-      {selectedVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 px-4">
-          <button
-            onClick={() => setSelectedVideo(null)}
-            className="absolute right-6 top-6 text-4xl font-light text-white transition hover:text-gray-400"
-          >
-            ×
-          </button>
+{selectedVideo && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 px-4">
+    <button
+      onClick={() => setSelectedVideo(null)}
+      className="absolute right-6 top-6 z-[1000] text-4xl font-light text-white transition hover:text-gray-400"
+    >
+      ×
+    </button>
 
           <div className="w-full max-w-6xl">
             <div className="relative aspect-video">
