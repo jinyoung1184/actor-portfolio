@@ -11,28 +11,28 @@ const sections = [
         title: "자유연기",
         subtitle: "American History X (Scene Study)",
         youtubeId: "Xz145KCX-js",
-        thumbnail: "/video/free1.jpg",
+        thumbnail: "/video/free1.JPG",
       },
     ],
   },
 
-{
-  title: "MUSIC VIDEO",
-  videos: [
-    {
-      title: "새벽 5시",
-      subtitle: "Music Video",
-      youtubeId: "cva0wAz8gI4",
-      thumbnail: "/video/music1.jpg",
-    },
-    {
-      title: "Love Season",
-      subtitle: "이효정",
-      youtubeId: "9uFoLE2viX8",
-      thumbnail: "/video/love.jpg",
-    },
-  ],
-},
+  {
+    title: "MUSIC VIDEO",
+    videos: [
+      {
+        title: "새벽 5시",
+        subtitle: "Music Video",
+        youtubeId: "cva0wAz8gI4",
+        thumbnail: "/video/music1.JPG",
+      },
+      {
+        title: "Love Season",
+        subtitle: "이효정",
+        youtubeId: "9uFoLE2viX8",
+        thumbnail: "/video/love.JPG",
+      },
+    ],
+  },
 ];
 
 export default function VideoPage() {
