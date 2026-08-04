@@ -41,7 +41,7 @@ export default function Home() {
 
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 flex h-full flex-col justify-end pb-24 text-center md:items-end md:pr-32">
+      <div className="relative z-10 flex h-full flex-col justify-end pb-8 text-center md:pb-24 md:items-end md:pr-32">
         <h1
           className={`${notoSerif.className} text-6xl md:text-[9rem] font-light tracking-[0.08em] text-stone-100`}
         >
@@ -54,25 +54,41 @@ export default function Home() {
           JIN YOUNG SHIN
         </p>
 
-        <nav className="mt-10 flex items-center justify-center gap-4 text-xs tracking-[0.35em] md:gap-8 md:text-sm">
-          <Link href="/profile" className="hover:text-gray-300">
-            PROFILE
-          </Link>
+<nav className="absolute top-0 left-0 z-30 w-full">
+  <div className="mx-auto flex max-w-7xl items-center justify-center gap-8 py-5 text-sm tracking-[0.2em] text-gray-400">
 
-          <span className="text-white/30">•</span>
+    <Link
+      href="/"
+      className="relative -top-[1px] text-2xl text-white hover:text-gray-300 transition"
+    >
+      ⌂
+    </Link>
 
-          <Link href="/career" className="hover:text-gray-300">
-            CAREER
-          </Link>
+    <Link
+      href="/profile"
+      className="text-white hover:text-gray-300 transition"
+    >
+      PROFILE
+    </Link>
 
-          <span className="text-white/30">•</span>
+    <Link
+      href="/career"
+      className="hover:text-white transition"
+    >
+      CAREER
+    </Link>
 
-          <Link href="/video" className="hover:text-gray-300">
-            VIDEO
-          </Link>
-        </nav>
+    <Link
+      href="/video"
+      className="hover:text-white transition"
+    >
+      VIDEO
+    </Link>
 
-        <p className="mt-10 text-xs md:text-sm tracking-[0.08em] text-gray-300">
+  </div>
+</nav>
+
+        <p className="mt-5 text-xs md:text-sm tracking-[0.08em] text-gray-300">
           jinyoung1184@naver.com
         </p>
 
@@ -80,7 +96,7 @@ export default function Home() {
   href="https://www.instagram.com/rising_0/"
   target="_blank"
   rel="noopener noreferrer"
-  className="mt-5 mx-auto md:mx-0 text-gray-300 hover:text-white"
+  className="mt-3 mx-auto md:mx-0 text-gray-300 hover:text-white"
 >
           <svg
             xmlns="http://www.w3.org/2000/svg"
