@@ -17,14 +17,27 @@ const notoSerif = Noto_Serif_KR({
 export default function Home() {
   return (
     <main className="relative h-screen overflow-hidden bg-black text-white">
-<img
-  src="/images/hero.jpg"
-  alt="신진영"
-  className="absolute inset-0 h-full w-full object-cover animate-cinematicReveal"
-  style={{
-    objectPosition: "35% 25%",
-  }}
-/>
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="absolute inset-0 hidden md:block w-full h-full object-cover animate-cinematicReveal"
+>
+  <source src="/video/hero-desktop.mp4" type="video/mp4" />
+</video>
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="absolute inset-0 block md:hidden w-full h-full object-cover animate-cinematicReveal"
+>
+  <source src="/video/hero-mobile.mp4" type="video/mp4" />
+</video>
 
       <div className="absolute inset-0 bg-black/50" />
 
