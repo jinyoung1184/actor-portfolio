@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "신진영 포트폴리오",
-  description: "Actor Portfolio - JIN YOUNG SHIN",
+  title: "신진영 | Actor Portfolio",
+  description: "배우 신진영 공식 포트폴리오",
 };
 
 export default function RootLayout({
