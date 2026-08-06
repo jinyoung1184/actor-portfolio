@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Noto_Serif_KR } from "next/font/google";
+
+const notoSerif = Noto_Serif_KR({
+  subsets: ["latin"],
+  weight: ["200", "300", "400"],
+});
 
 const works = [
   {
@@ -126,8 +132,9 @@ const [selectedStill, setSelectedStill] = useState<string | null>(null);
   <main className="min-h-screen bg-black pt-24 text-white">
 
     <nav className="fixed top-0 left-0 z-[999] w-full bg-black/80 backdrop-blur-md">
- <div className="mx-auto flex max-w-7xl items-center justify-center gap-8 py-5 text-sm tracking-[0.2em] text-gray-400">
-
+<div
+  className={`${notoSerif.className} mx-auto flex max-w-7xl items-center justify-center gap-8 py-5 text-sm tracking-[0.12em] text-gray-400`}
+>
 <Link
   href="/"
   className="relative -top-[1px] text-2xl hover:text-white transition"
@@ -136,7 +143,7 @@ const [selectedStill, setSelectedStill] = useState<string | null>(null);
 </Link>
 
         <Link href="/profile" className="hover:text-white transition">
-          PROFILE
+          ABOUT
         </Link>
 
         <Link href="/career" className="text-white">
@@ -196,6 +203,35 @@ onClick={() => {
           ))}
         </div>
       </section>
+{/* CONTACT */}
+<div
+  className={`${notoSerif.className} fixed bottom-4 left-1/2 z-40 flex -translate-x-1/2 flex-col items-center`}
+>
+  <p className="text-xs md:text-sm text-gray-400">
+    jinyoung1184@naver.com
+  </p>
+
+  <a
+    href="https://www.instagram.com/rising_0/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-2 text-gray-500 transition hover:text-white"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <path d="M16 11.37a4 4 0 1 1-7.75 1.26 4 4 0 0 1 7.75-1.26z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  </a>
+</div>
 
 {/* MODAL */}
 {selectedWork && (

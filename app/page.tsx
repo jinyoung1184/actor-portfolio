@@ -47,40 +47,42 @@ export default function Home() {
       <div className="absolute inset-0 bg-black/20" />
 
 
-      {/* TOP NAV */}
-      <nav className="absolute top-0 left-0 z-30 w-full">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-8 py-5 text-sm tracking-[0.2em] text-gray-400">
+{/* TOP NAV */}
+<nav className="fixed top-0 left-0 z-[999] w-full bg-black/80 backdrop-blur-md">
+<div
+  className={`${notoSerif.className} mx-auto flex max-w-7xl items-center justify-center gap-8 py-5 text-sm tracking-[0.12em] text-gray-400`}
+>
 
-          <Link
-            href="/"
-            className="relative -top-[1px] text-2xl text-white hover:text-gray-300 transition"
-          >
-            ⌂
-          </Link>
+    <Link
+      href="/"
+      className="relative -top-[1px] text-2xl text-white hover:text-gray-300 transition"
+    >
+      ⌂
+    </Link>
 
-          <Link
-            href="/profile"
-            className="text-white hover:text-gray-300 transition"
-          >
-            PROFILE
-          </Link>
+    <Link
+      href="/profile"
+      className="hover:text-white transition"
+    >
+      ABOUT
+    </Link>
 
-          <Link
-            href="/career"
-            className="hover:text-white transition"
-          >
-            CAREER
-          </Link>
+    <Link
+      href="/career"
+      className="hover:text-white transition"
+    >
+      CAREER
+    </Link>
 
-          <Link
-            href="/video"
-            className="hover:text-white transition"
-          >
-            VIDEO
-          </Link>
+    <Link
+      href="/video"
+      className="hover:text-white transition"
+    >
+      VIDEO
+    </Link>
 
-        </div>
-      </nav>
+  </div>
+</nav>
 
 
       {/* NAME + CONTACT */}
@@ -103,26 +105,28 @@ export default function Home() {
         </div>
 
 
-        <p className="mt-5 text-xs md:text-sm tracking-[0.08em] text-gray-300">
-          jinyoung1184@naver.com
-        </p>
+<p
+  className={`${notoSerif.className} mt-5 text-xs md:text-sm tracking-[0.08em] text-gray-400`}
+>
+  jinyoung1184@naver.com
+</p>
 
 
-        <a
-          href="https://www.instagram.com/rising_0/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-3 mx-auto md:mx-0 text-gray-300 hover:text-white"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="26"
-            height="26"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          >
+<a
+  href="https://www.instagram.com/rising_0/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-2 mx-auto md:mx-0 text-gray-500 hover:text-white transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.4"
+  >
             <rect x="2" y="2" width="20" height="20" rx="5" />
             <path d="M16 11.37a4 4 0 1 1-7.75 1.26 4 4 0 0 1 7.75-1.26z" />
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
