@@ -10,17 +10,24 @@ const notoSerif = Noto_Serif_KR({
 });
 
 const sections = [
-  {
-    title: "SELF TAPE",
-    videos: [
-      {
-        title: "자유연기",
-        subtitle: "American History X (Scene Study)",
-        youtubeId: "Xz145KCX-js",
-        thumbnail: "/video/free1.JPG",
-      },
-    ],
-  },
+{
+  title: "SELF TAPE",
+  videos: [
+    {
+      title: "American History X",
+      subtitle: "Lamont",
+      youtubeId: "Xz145KCX-js",
+      thumbnail: "/video/free1.JPG",
+    },
+
+    {
+      title: "The Crucible",
+      subtitle: "John Proctor",
+      youtubeId: "2gEXSGDBvWU",
+      thumbnail: "/video/crucible.JPG",
+    },
+  ],
+},
 
   {
     title: "MUSIC VIDEO",
