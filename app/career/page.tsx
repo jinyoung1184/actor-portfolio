@@ -111,6 +111,24 @@ const works = [
     ],
   },
 
+{
+  title: "다경과 석우",
+  youtubeId: "3vyM7R31ZHU",
+  videoThumbnail: "/video/da1.JPG",
+  festival: ["단국대학교 졸업작품"],
+  poster: "/posters/da.JPG",
+  stills: [
+    "/stills/da/da_still1.JPG",
+    "/stills/da/da_still2.JPG",
+    "/stills/da/da_still3.JPG",
+    "/stills/da/da_still4.JPG",
+    "/stills/da/da_still5.JPG",
+    "/stills/da/da_still6.JPG",
+    "/stills/da/da_still7.JPG",
+    "/stills/da/da_still8.JPG",
+  ],
+},
+
   {
     title: "비비비",
     youtubeId: null,
