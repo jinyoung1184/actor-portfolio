@@ -115,7 +115,7 @@ const works = [
   title: "다경과 석우",
   youtubeId: "3vyM7R31ZHU",
   videoThumbnail: "/video/da1.JPG",
-  festival: ["단국대학교 졸업작품"],
+  festival: ["단국대학교 영화전공 졸업작품"],
   poster: "/posters/da.JPG",
   stills: [
     "/stills/da/da_still1.JPG",
