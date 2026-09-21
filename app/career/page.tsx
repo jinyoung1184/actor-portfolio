@@ -207,14 +207,27 @@ onClick={() => {
 
 
 <div className="mt-2 min-h-[80px] space-y-1">
-  {work.festival.map((item) => (
-    <p
-      key={item}
-      className="text-xs leading-relaxed text-gray-500"
-    >
-      {item}
-    </p>
-  ))}
+{work.festival.map((item) => (
+  <p
+    key={item}
+    className="text-xs leading-relaxed text-gray-500"
+  >
+    {work.title === "비비비" ? (
+      <>
+        <span className="block md:hidden">
+          제27회 정동진독립영화제<br />
+          단편경쟁
+        </span>
+
+        <span className="hidden md:inline">
+          제27회 정동진독립영화제 단편경쟁
+        </span>
+      </>
+    ) : (
+      item
+    )}
+  </p>
+))}
 </div>
               </div>
             </button>
