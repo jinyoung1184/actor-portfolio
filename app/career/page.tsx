@@ -113,7 +113,7 @@ const works = [
 
 {
   title: "다경과 석우",
-  youtubeId: "3vyM7R31ZHU",
+  youtubeId: "YQ93E0SSuwM",
   videoThumbnail: "/video/da1.JPG",
   festival: ["단국대학교 영화전공 졸업작품"],
   poster: "/posters/da.JPG",
