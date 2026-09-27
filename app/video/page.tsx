@@ -26,6 +26,13 @@ const sections = [
       youtubeId: "2gEXSGDBvWU",
       thumbnail: "/video/crucible.JPG",
     },
+
+    {
+  title: "The Invincible Hero",
+  subtitle: "Action Scene",
+  youtubeId: "oXWna2tyEm4",
+  thumbnail: "/video/action1.JPG",
+},
   ],
 },
 
