@@ -17,6 +17,8 @@ const works = [
     festival: [
       "제22회 제천국제음악영화제",
       "제29회 부천국제판타스틱영화제 단편경쟁",
+      "제27회 제주여성영화제",
+      "제17회 광주여성영화제",
     ],
     poster: "/posters/zombie.JPG",
     stills: [
@@ -73,7 +75,9 @@ const works = [
     title: "연옥",
     youtubeId: "rC2LIQ7Tqz0",
     videoThumbnail: "/video/black1.JPG",
-    festival: ["제50회 서울독립영화제 단편경쟁"],
+    festival: [
+      "한국영화아카데미 40기 졸업작품",
+      "제50회 서울독립영화제 단편경쟁"],
     poster: "/posters/black.JPG",
     stills: [
       "/stills/black/black_still1.JPG",
