@@ -76,8 +76,8 @@ const works = [
     youtubeId: "rC2LIQ7Tqz0",
     videoThumbnail: "/video/black1.JPG",
     festival: [
-    "제50회 서울독립영화제 단편경쟁",
-    "한국영화아카데미 40기 졸업작품"],
+    "한국영화아카데미 40기 졸업작품",
+    "제50회 서울독립영화제 단편경쟁"],
     poster: "/posters/black.JPG",
     stills: [
       "/stills/black/black_still1.JPG",
