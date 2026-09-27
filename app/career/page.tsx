@@ -16,8 +16,8 @@ const works = [
     videoThumbnail: "/video/zombie1.JPG",
     festival: [
       "제30회 토론토 릴 아시안 국제영화제",
-      "제22회 제천 음악영화제",
       "제29회 부천 판타스틱영화제 단편경쟁",
+      "제22회 제천 음악영화제 뉴탤런트",
       "제27회 제주 여성영화제",
     ],
     poster: "/posters/zombie.JPG",
