@@ -15,10 +15,10 @@ const works = [
     youtubeId: "rkOK5ONG9mQ",
     videoThumbnail: "/video/zombie1.JPG",
     festival: [
-      "제22회 제천국제음악영화제",
-      "제29회 부천국제판타스틱영화제 단편경쟁",
-      "제27회 제주여성영화제",
-      "제17회 광주여성영화제",
+      "제30회 토론토 릴 아시안영화제",
+      "제22회 제천 음악영화제",
+      "제29회 부천 판타스틱영화제 단편경쟁",
+      "제27회 제주 여성영화제",
     ],
     poster: "/posters/zombie.JPG",
     stills: [
@@ -39,7 +39,7 @@ const works = [
     title: "홀로",
     youtubeId: "YB1TYf89gAE",
     videoThumbnail: "/video/holo1.JPG",
-    festival: ["제30회 부천국제판타스틱영화제 단편경쟁"],
+    festival: ["제30회 부천 판타스틱영화제 단편경쟁"],
     poster: "/posters/holo.JPG",
     stills: [
       "/stills/holo/holo_still1.JPG",
@@ -77,7 +77,7 @@ const works = [
     videoThumbnail: "/video/black1.JPG",
     festival: [
     "한국영화아카데미 40기 졸업작품",
-    "제50회 서울독립영화제 단편경쟁"],
+    "제50회 서울 독립영화제 단편경쟁"],
     poster: "/posters/black.JPG",
     stills: [
       "/stills/black/black_still1.JPG",
@@ -96,9 +96,9 @@ const works = [
     youtubeId: "bw2Pd46m42o",
     videoThumbnail: "/video/may1.JPG",
     festival: [
-      "제24회 전북독립영화제 배우상",
-      "제50회 서울독립영화제 단편경쟁",
-      "제25회 대구단편영화제 국내경쟁 대상",
+      "제24회 전북 독립영화제 배우상",
+      "제50회 서울 독립영화제 단편경쟁",
+      "제25회 대구 단편영화제 국내경쟁 대상",
     ],
     poster: "/posters/may.JPG",
     stills: [
@@ -137,7 +137,7 @@ const works = [
     title: "비비비",
     youtubeId: null,
     videoThumbnail: null,
-    festival: ["제27회 정동진독립영화제 단편경쟁"],
+    festival: ["제27회 정동진 독립영화제 단편경쟁"],
     poster: "/posters/bbb.JPG",
     stills: [],
   },
