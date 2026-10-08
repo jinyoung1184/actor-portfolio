@@ -210,26 +210,74 @@ onClick={() => {
                 </h2>
 
 
-<div className="mt-2 min-h-[80px] space-y-1">
+<div className="mt-2 min-h-[120px] space-y-1">
 {work.festival.map((item) => (
   <p
     key={item}
     className="text-xs leading-relaxed text-gray-500"
   >
-    {work.title === "비비비" ? (
+{work.title === "우울한 좀비와 브런치" ? (
+  <>
+    {item === "제30회 토론토 릴 아시안 국제영화제" ? (
       <>
         <span className="block md:hidden">
-          제27회 정동진독립영화제<br />
-          단편경쟁
+          제30회 토론토 릴 아시안<br />
+          국제영화제
         </span>
-
         <span className="hidden md:inline">
-          제27회 정동진독립영화제 단편경쟁
+          제30회 토론토 릴 아시안 국제영화제
+        </span>
+      </>
+    ) : item === "제29회 부천 판타스틱영화제 단편경쟁" ? (
+      <>
+        <span className="block md:hidden">
+          제29회 부천 판타스틱영화제<br />
+        </span>
+        <span className="hidden md:inline">
+          제29회 부천 판타스틱영화제 단편경쟁
+        </span>
+      </>
+    ) : item === "제22회 제천 음악영화제 뉴탤런트" ? (
+      <>
+        <span className="block md:hidden">
+          제22회 제천 국제음악영화제<br />
+        </span>
+        <span className="hidden md:inline">
+          제22회 제천 음악영화제 뉴탤런트
         </span>
       </>
     ) : (
       item
     )}
+  </>
+  ) : work.title === "홀로" ? (
+  item === "제30회 부천 판타스틱영화제 단편경쟁" ? (
+    <>
+      <span className="block md:hidden">
+        제30회 부천 판타스틱영화제<br />
+        단편경쟁
+      </span>
+      <span className="hidden md:inline">
+        제30회 부천 판타스틱영화제 단편경쟁
+      </span>
+    </>
+  ) : (
+    item
+  )
+) : work.title === "비비비" ? (
+  <>
+    <span className="block md:hidden">
+      제27회 정동진독립영화제<br />
+      단편경쟁
+    </span>
+
+    <span className="hidden md:inline">
+      제27회 정동진독립영화제 단편경쟁
+    </span>
+  </>
+) : (
+  item
+)}
   </p>
 ))}
 </div>
